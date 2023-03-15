@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "xiosbase": "cpp",
+        "iostream": "cpp",
+        "set": "cpp",
+        "ostream": "cpp",
+        "xstring": "cpp",
+        "istream": "cpp",
+        "xtree": "cpp",
+        "vector": "cpp",
+        "utility": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "locale": "cpp",
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "chrono": "cpp",
+        "random": "cpp"
+    }
+}
