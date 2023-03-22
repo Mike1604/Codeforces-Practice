@@ -1,5 +1,5 @@
 /*
-https://codeforces.com/contest/1807/problem/G1    
+https://codeforces.com/contest/731/problem/A
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: Everybody♫
                 CREATOR: Mac Miller™®
@@ -26,24 +26,13 @@ typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
 int main(){_
-    lli t; cin>>t;
-    vector<string>ans;
-    while(t--){
-        lli n; cin>>n;
-        vector<lli>nums (n,0);
-        fore(i,0,n){cin>>nums[i];}
-        sort(nums.begin(), nums.end());
-        if(nums[0]!=1){nop; continue;}
-        vector<lli>pos(n,0);
-        pos[0]=1;
-        bool f=true;
-        for(int i=1;i<n; i++){
-            if(nums[i]<= pos[i-1]){
-                pos[i]=pos[i-1]+nums[i];
-            }
-            else{nop; f=false; break;}
-        }
-        if(f){yes;}
+    string s; cin>>s;
+    char curr='a';
+    lli ans=0;
+    for(auto e:s){
+        ans+=min(abs(curr-e),(26-abs(curr-e)));
+        curr=e;
     }
+    cout<<ans<<ENDL;
     return 0;
 }

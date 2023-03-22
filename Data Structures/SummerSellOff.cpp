@@ -1,5 +1,5 @@
 /*
-https://codeforces.com/contest/1807/problem/G1    
+https://codeforces.com/contest/810/problem/B
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: Everybody♫
                 CREATOR: Mac Miller™®
@@ -25,25 +25,28 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
+bool cmp(const vector<lli>& a, const vector<lli>& b) {
+    lli sell_a = min(a[0]*2, a[1]) - min(a[0], a[1]);
+    lli sell_b = min(b[0]*2, b[1]) - min(b[0], b[1]);
+    return sell_a > sell_b;
+}
 int main(){_
-    lli t; cin>>t;
-    vector<string>ans;
-    while(t--){
-        lli n; cin>>n;
-        vector<lli>nums (n,0);
-        fore(i,0,n){cin>>nums[i];}
-        sort(nums.begin(), nums.end());
-        if(nums[0]!=1){nop; continue;}
-        vector<lli>pos(n,0);
-        pos[0]=1;
-        bool f=true;
-        for(int i=1;i<n; i++){
-            if(nums[i]<= pos[i-1]){
-                pos[i]=pos[i-1]+nums[i];
-            }
-            else{nop; f=false; break;}
-        }
-        if(f){yes;}
+    lli n,m; cin>>n>>m;
+    vector<vector<lli>> nums;
+    fore(i,0,n){
+        lli a,b; cin>>a>>b;
+        nums.push_back({a,b});
     }
+    sort(all(nums), cmp);
+    lli ans=0;
+    for(int i=0; i<n; i++){
+        if(i<m){
+            ans+=min(nums[i][0]*2, nums[i][1]);;
+        }
+        else{
+            ans+=min(nums[i][0], nums[i][1]);
+        }
+    }
+    cout<<ans<<ENDL;
     return 0;
 }
