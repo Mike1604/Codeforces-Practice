@@ -1,5 +1,5 @@
 /*
-https://codeforces.com/contest/118/problem/A
+https://codeforces.com/contest/514/problem/A
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: Everybody♫
                 CREATOR: Mac Miller™®
