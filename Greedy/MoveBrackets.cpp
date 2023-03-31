@@ -1,5 +1,5 @@
 /*
-https://cses.fi/problemset/task/1084/
+https://codeforces.com/contest/1374/problem/C
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: Everybody♫
                 CREATOR: Mac Miller™®
@@ -25,21 +25,20 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
-int main(){_
-    lli n, m,k; cin>>n>>m>>k;
-    vi apart(n);
-    vi person(m);
-    fore(i,0,n){cin>>apart[i];}
-    fore(i,0,m){cin>>person[i];}
-    sort(apart.rbegin(), apart.rend());
-    sort(person.rbegin(), person.rend());
-    lli ans=0,i=0,j=0;
-    while((i<n) && (j<m)){
-        if(((person[j]+k)>= apart[i] ) && ((person[j]-k)<=apart[i])){i++; j++; ans++;}
-        else if(apart[i] > person[j]+k){i++;}
-        else if(apart[i] < person[j]-k){j++;}
-        
+void solve(){
+    lli n; cin>>n;
+    string s; cin>>s;
+    lli ap=0, cerr=0,ans;
+    for(auto e:s){
+        if(e=='('){ap++;}
+        else if((e==')') && (ap!=0)){ap--;}
+        else{cerr++;}
     }
-    cout<<ans<<ENDL;
+    cout<<(ap+cerr)/2<<ENDL;
+}
+
+int main(){_
+    lli t; cin>>t;
+    while(t--){solve();}
     return 0;
 }
