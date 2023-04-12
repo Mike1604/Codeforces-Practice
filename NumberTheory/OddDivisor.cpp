@@ -1,8 +1,8 @@
-/*
+/* https://codeforces.com/contest/1475/problem/A
 
                 VOLUME: ▁▂▃▄▅▆▇ 100%
-                SONG: 4th Dimension♫
-                CREATOR: KIDS SEE GHOSTS™®
+                SONG: In my room♫
+                CREATOR: Frank Ocean™®
                 0:35 ━❍──────── -3:56
                 ↻     ⊲  Ⅱ  ⊳     ↺
                    
@@ -25,7 +25,17 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
-int main(){_
+void solve(){
+    lli n; cin>>n;
+    if(n & (n-1)) {
+        yes;
+    } else {
+        nop;
+    }
+}
 
+int main(){_
+    lli t; cin>>t;
+    while(t--){solve();};
     return 0;
 }
