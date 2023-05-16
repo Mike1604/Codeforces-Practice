@@ -25,26 +25,27 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
  
-map<lli,lli> dp;
- 
+
+lli mod = 1e9 + 7;
+
 lli solve(int n){
-    if(dp.count(n) !=0) return dp[n];
-    if(n==0) return 1; 
-    if(n<0) return -1;
- 
-    lli ans=0;
- 
-    fore(i,1,7){
-        int aux=solve(n-i);
-        if(aux !=-1 ){ans+=aux;}
+    vector<lli> tab((n+1),0);
+    set<int> opc = {1,2,3,4,5,6};
+    tab[0]=1;
+    fore(i,0,n){
+        for(auto e:opc){
+            if((e+i)<=(n)){
+                tab[i+e]= (tab[i+e]+tab[i])%mod;
+            }
+        }
     }
-    dp[n]=ans;
-    return ans;
+    return tab[n];
 }
  
  
 int main(){_
     int n; cin>>n;
-    cout<<solve(n)%1000000007<<ENDL;;
+    lli ans= solve(n);
+    cout<<ans<<ENDL;;
     return 0;
 }
