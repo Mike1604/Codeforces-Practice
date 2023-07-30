@@ -1,5 +1,5 @@
 /*
-
+https://codeforces.com/contest/430/problem/B
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: LOST FOREVER♫
                 CREATOR: Travis Scott™®
@@ -26,6 +26,26 @@ typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
 int main(){_
+    lli n, k, x; cin>>n>>k>>x;
+    vi nums(n,0);
+    fore(i,0,n){cin>>nums[i];}
+    lli ans=0;
+    fore(r,0,n){
+        if(nums[r] == x){
+            lli j=r, m=r, s=2, auxans=0;
+            while((nums[m] == nums[j]) && (m>=0) && (j<n)){
+                while((m>0) && (nums[m-1] == nums[m])){ m--; s++;}
+                while((j<n) && (nums[j+1] == nums[j])){ j++; s++;}
+                m--; j++;
+                if(s<3) break;
 
+                auxans+=s; 
+                s=2;
+            }
+            /* cout<<auxans<<" "<<r<<ENDL; */
+            ans = max(ans, auxans-1);
+        }
+    }
+    cout<<ans<<ENDL;
     return 0;
 }

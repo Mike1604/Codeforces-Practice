@@ -1,8 +1,8 @@
 /*
-
+https://codeforces.com/problemset/problem/69/A
                 VOLUME: ▁▂▃▄▅▆▇ 100%
-                SONG: LOST FOREVER♫
-                CREATOR: Travis Scott™®
+                SONG: 4th Dimension♫
+                CREATOR: KIDS SEE GHOSTS™®
                 0:35 ━❍──────── -3:56
                 ↻     ⊲  Ⅱ  ⊳     ↺
                    
@@ -26,6 +26,16 @@ typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
 int main(){_
-
+    lli n; cin>>n;
+    lli suma=0, sumb=0, sumc=0;
+    fore(i,0,n){
+        lli a,b,c; cin>>a>>b>>c;
+        suma+=a;
+        sumb+=b;
+        sumc+=c;
+    }
+    if((suma == 0) && (sumb == 0) && (sumc == 0)){
+        yes;
+    }else{nop;}
     return 0;
 }

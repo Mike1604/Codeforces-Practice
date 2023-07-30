@@ -1,8 +1,8 @@
 /*
-
+https://codeforces.com/contest/136/problem/A
                 VOLUME: ▁▂▃▄▅▆▇ 100%
-                SONG: LOST FOREVER♫
-                CREATOR: Travis Scott™®
+                SONG: 4th Dimension♫
+                CREATOR: KIDS SEE GHOSTS™®
                 0:35 ━❍──────── -3:56
                 ↻     ⊲  Ⅱ  ⊳     ↺
                    
@@ -26,6 +26,12 @@ typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
 int main(){_
-
+    lli n; cin>>n;
+    vi ans(n,0);
+    fore(i,0,n){
+        lli x; cin>>x; x--;
+        ans[x]=i;
+    }
+    for(auto e:ans){cout<<e+1<<" ";}cout<<ENDL;
     return 0;
 }

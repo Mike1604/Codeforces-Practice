@@ -1,8 +1,8 @@
 /*
-
+https://codeforces.com/problemset/problem/456/A
                 VOLUME: ▁▂▃▄▅▆▇ 100%
-                SONG: LOST FOREVER♫
-                CREATOR: Travis Scott™®
+                SONG: 4th Dimension♫
+                CREATOR: KIDS SEE GHOSTS™®
                 0:35 ━❍──────── -3:56
                 ↻     ⊲  Ⅱ  ⊳     ↺
                    
@@ -26,6 +26,21 @@ typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
 int main(){_
-
+    lli n; cin>>n;
+    vector<ii> nums;
+    fore(i,0,n){
+        lli x, y; cin>>x>>y;
+        nums.push_back({x,y});
+    }
+    sort(all(nums));
+    bool flag = false;
+    fore(i,0,n-1){
+        if(nums[i].s > nums[i+1].s){
+            flag = true;
+        }
+    }
+    if(flag){
+        cout<<"Happy Alex"<<ENDL;
+    }else{cout<<"Poor Alex"<<ENDL;}
     return 0;
 }
