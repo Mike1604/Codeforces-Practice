@@ -1,5 +1,5 @@
 /*
-
+https://codeforces.com/contest/2094/problem/C
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: LOST FOREVER♫
                 CREATOR: Travis Scott™®
@@ -25,7 +25,35 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
-int main(){_
+void solve(){
+    lli n; cin>>n;
+    lli total = n+n;
+    vector<lli> perm(total, 0);
+    set<lli> dis;
+    fore(i,0,n){
+        fore(j,0,n){
+            lli x; cin>>x;
+            perm[i+j+1] = x;
+            dis.insert(x);
+        }
+    }
 
+    lli missing = -1;
+    fore(i,0,total){
+        if(!dis.count(i+1)){
+            missing = i+1;
+        }
+    }
+
+    perm[0] = missing;
+
+    for(auto e:perm){
+        cout<<e<<" ";
+    }cout<<ENDL;
+}
+
+int main(){_
+    lli t; cin>>t;
+    while(t--)solve();
     return 0;
 }

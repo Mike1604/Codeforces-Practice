@@ -1,5 +1,5 @@
 /*
-
+https://codeforces.com/contest/2094/problem/B
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: LOST FOREVER♫
                 CREATOR: Travis Scott™®
@@ -25,7 +25,28 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
-int main(){_
+void solve(){
+    lli n, m, l, r; cin>> n>> m>> l >> r;
+    lli days = 0, i = -1;
+    lli lAns = 0, rAns = 0;
+    while(i >= l and days < m){
+        lAns = i;
+        days++;
+        i--;
+    }
 
+    i = 1;
+    while(i <= r and days < m){
+        rAns = i;
+        days++;
+        i++;
+    }
+
+    cout<<lAns<<" "<<rAns<<ENDL;
+}
+
+int main(){_
+    lli t; cin>>t;
+    while(t--)solve();
     return 0;
 }

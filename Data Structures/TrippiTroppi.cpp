@@ -1,5 +1,5 @@
 /*
-
+https://codeforces.com/contest/2094/problem/A
                 VOLUME: ▁▂▃▄▅▆▇ 100%
                 SONG: LOST FOREVER♫
                 CREATOR: Travis Scott™®
@@ -7,7 +7,7 @@
                 ↻     ⊲  Ⅱ  ⊳     ↺
                    
 */
-//g++ -std=c++17 ./Data\ Structures/<FileName>.cpp -o test && ./test < in.txt > out.txt
+//g++ -std=c++17 a.cpp && a < in.txt > out.txt
 #include<bits/stdc++.h>
 #define fore(i,a,b) for(int i=(a), FINALD=(b); i<FINALD; ++i)
 #define ENDL '\n'
@@ -25,7 +25,17 @@ typedef pair<lli,lli> ii;
 typedef pair<int, int> pi;
 typedef vector<lli> vi;
 
-int main(){_
+void solve(){
+    string ans = "";
+    fore(i,0,3){
+        string in; cin>>in;
+        ans += in[0];
+    }
+    cout << ans << ENDL;
+}
 
+int main(){_
+    int t; cin>>t;
+    while(t--) solve();
     return 0;
 }

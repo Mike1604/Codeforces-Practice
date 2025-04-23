@@ -1,4 +1,5 @@
-word
-l10n
-i18n
-p43s
+YES
+YES
+NO
+NO
+YES
